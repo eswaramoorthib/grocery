@@ -52,8 +52,8 @@ const AddProducts = () => {
       detail: detail,
       life: 3000,
     });
-  // Handle validation
-  const validate = (values: FormikValues) => {
+
+    const validate = (values: FormikValues) => {
     let error: FormikValues = {};
     if (values.productName.length < 2) {
       error.productName = "Product Name is Required!";
@@ -242,5 +242,5 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
 
+export default AddProducts;

@@ -4,7 +4,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Header/Header";
 const AllProducts = React.lazy(() => import("./Pages/AllProducts"));
-// const ProductsList = React.lazy(() => import("./Pages/ProductsList"));
+const ProductsList = React.lazy(() => import("./Pages/ProductsList"));
 const AddProducts = React.lazy(() => import("./Pages/AddProducts"));
 const queryClient = new QueryClient();
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
       <Suspense fallback={<></>}>
         <Routes>
           <Route path="/" element={<AllProducts />} />
-          {/* <Route path="list" element={<ProductsList />} /> */}
+          <Route path="list" element={<ProductsList />} />
           <Route path="list/:productDbId" element={<AddProducts />} />
           <Route path="add" element={<AddProducts />} />
         </Routes>

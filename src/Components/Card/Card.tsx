@@ -16,4 +16,6 @@ const card = (props: CardProps) => (
     
   </div>
 );
+
+
 export default card;
